@@ -11,7 +11,7 @@ class Config:
         with open(config_path, 'r') as f:
             self.config = json.load(f)
             self.language = self.config.get('language', 'Chinese')
-            self.open_ai_key = self.config.get('open_ai_key')
+            self.open_ai_key = self.config.get('open_ai_key') || os.environ['OPENAI_API_KEY']
             self.open_ai_proxy = self.config.get('open_ai_proxy')
             self.open_ai_chat_model = self.config.get('open_ai_chat_model', 'gpt-3.5-turbo')
             if not self.open_ai_key:

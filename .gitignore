@@ -3,8 +3,6 @@
 /.vscode
 /index.bin
 /texts.csv
-/config.json
 /temp
 /upload
 __pycache__
-config.json
